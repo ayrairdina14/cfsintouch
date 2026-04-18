@@ -1,11 +1,11 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #fff7f0;
 }
 
 nav {
-    background: #333;
+    background: #ff914d;
     color: white;
     padding: 10px;
     display: flex;
@@ -22,30 +22,38 @@ nav ul {
 nav a {
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-.content {
+section {
+    display: none;
     text-align: center;
-    margin-top: 50px;
+    padding: 40px;
+}
+
+.active {
+    display: block;
+}
+
+img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 button {
     padding: 10px 20px;
-    background: #333;
+    background: #ff914d;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {
-    background: #555;
-}
-
-input {
-    padding: 10px;
-    width: 200px;
+    background: #ff6f1a;
 }

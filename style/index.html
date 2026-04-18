@@ -2,24 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Cat World</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-    <h1>My Website</h1>
+    <h1>🐱 Cat World</h1>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('gallery')">Gallery</a></li>
+        <li><a onclick="showPage('facts')">Fun Facts</a></li>
     </ul>
 </nav>
 
-<section class="content">
-    <h2>Welcome</h2>
-    <p>This is the home page.</p>
-    <button onclick="showMessage()">Click Me</button>
+<!-- HOME -->
+<section id="home" class="active">
+    <h2>Welcome to Cat World</h2>
+    <p>Cats are cute, playful, and loving animals!</p>
+    <button onclick="showMessage()">Why cats?</button>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h2>Cat Gallery</h2>
+    <img src="https://placekitten.com/200/200">
+    <img src="https://placekitten.com/201/200">
+    <img src="https://placekitten.com/200/201">
+</section>
+
+<!-- FACTS -->
+<section id="facts">
+    <h2>Fun Cat Facts</h2>
+    <p id="factText">Click the button to learn a fact!</p>
+    <button onclick="newFact()">Show Fact</button>
 </section>
 
 <script src="script.js"></script>

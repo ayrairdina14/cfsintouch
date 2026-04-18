@@ -1,16 +1,23 @@
-function showMessage() {
-    alert("Hello! You clicked the button.");
+function showPage(pageId) {
+    let sections = document.querySelectorAll("section");
+    sections.forEach(section => section.classList.remove("active"));
+
+    document.getElementById(pageId).classList.add("active");
 }
 
-function validateForm() {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
+function showMessage() {
+    alert("Cats are great companions and help reduce stress!");
+}
 
-    if (name === "" || email === "") {
-        alert("Please fill in all fields!");
-        return false;
-    }
+let facts = [
+    "Cats sleep for 12-16 hours a day.",
+    "A group of cats is called a clowder.",
+    "Cats can rotate their ears 180 degrees.",
+    "Cats have five toes on their front paws.",
+    "A cat’s nose print is unique like a fingerprint."
+];
 
-    alert("Form submitted successfully!");
-    return true;
+function newFact() {
+    let randomIndex = Math.floor(Math.random() * facts.length);
+    document.getElementById("factText").innerText = facts[randomIndex];
 }
